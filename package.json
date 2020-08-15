@@ -1,0 +1,19 @@
+{
+  "name": "zemdev",
+  "version": "1.0.0",
+  "description": "This is a test for zemoga",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "set DEBUG=* & node app.js",
+    "app" : "set DEBUG=app & node app.js"
+  },
+  "author": "jasson142@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
