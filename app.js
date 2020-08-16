@@ -1,14 +1,15 @@
-var express = require("express");
-var chalk = require("chalk");
-var debug = require("debug")("app")
-var morgan = require("morgan")
-var app = express();
+const express = require('express');
+const chalk = require('chalk');
+const debug = require('debug')('app');
+const morgan = require('morgan');
+const path = require('path');
 
-app.use(morgan("tiny"))
-app.get("/", (req, res) => {
-    res.send("My test")
-})
+const app = express();
 
-app.listen(3000, () => {
-    debug(`successfully created app at: ${chalk.green("http://localhost:3000")}`) 
-})
+app.use(morgan('tiny'));
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'views', 'index.html')));
+
+app.listen(3000, () => debug(`successfully created app at: ${chalk.green('http://localhost:3000')}`));
