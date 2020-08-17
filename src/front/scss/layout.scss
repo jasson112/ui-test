@@ -1,0 +1,293 @@
+@import 'mixin';
+@import 'variables';
+html, body {
+    margin: 0;
+   }
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: rgb(51,51,51);
+    background: linear-gradient(180deg, rgba(51,51,51,0.82) 0%, rgba(153,153,153,0.53) 80%, rgba(255,255,255,0) 100%);
+    position: fixed;
+    padding: 16px;
+    .head__title{
+        @include reset-anchor;
+        h1{
+            @include font-regular;
+            color: $header-color;
+            font-size: $header-title;
+            margin: 0;
+        } 
+    }
+    nav{
+        ul{
+            width: calc(100% - 32px);
+            @include reset-list;
+            display: flex;
+            justify-content: space-between;
+            li{
+                display: flex;
+                align-items: center;
+                a{
+                    @include reset-anchor;
+                    @include font-ligth;
+                    font-size: $header-link;
+                    color: $header-color;
+                }
+                figure{
+                    @include reset-figure;
+                }
+            }
+        }
+    }
+}
+main{
+    .banner__wrapper{
+        padding: 60vh 16px 0 16px;
+        background-image: url(/img/pope.jpg);
+        background-position: 65% 0;
+        background-repeat: no-repeat;
+        background-size: 100vh;
+        .banner__copy{
+            padding: 20px;
+            position: relative;
+            background: rgba(129, 129, 129, 45%);
+            backdrop-filter: blur(30px);
+            color: $header-color;
+            &-subtitle{
+                @include font-ligth;
+                font-size: 16px;
+            }
+            &-title{
+                @include font-regular;
+                font-size: 48px;
+                margin: 0;
+            }
+            &-description{
+                @include font-ligth;
+                font-size: 21px;
+            }
+            &-info{
+                @include font-ligth;
+                font-size: 14px;
+            }
+            &-veredict{
+                @include font-bold;
+                font-size: 20px;
+            }
+            &-votes{
+                display: flex;
+                .copy-votes__up{
+                    background: rgba(28, 187, 180, 0.9); 
+                    flex-grow: 1;
+                    figure{
+                        @include reset-figure;
+                        padding: 10px 15px;
+                        justify-content: center;
+                        display: flex;
+                    }
+                }
+                .copy-votes__down{
+                    background: rgba(255, 173, 29, 0.9); 
+                    flex-grow: 1;
+                    figure{
+                        @include reset-figure;
+                        padding: 10px 15px;
+                        justify-content: center;
+                        display: flex;
+                    }
+                }
+            }
+        }
+        .banner__closing{
+            display: flex;
+            justify-content: center;
+            background: rgb(112,112,112, 0.3);
+            &-shadow{
+                flex-grow: 1;
+                @include font-regular;
+                font-size: 13px;
+                color: white;
+                padding: 15px;
+                
+            }
+            &-days{
+                flex-grow: 1;
+                @include font-ligth;
+                background: rgb(255,255,255, 0.7);
+                font-size: 30px;
+                padding: 5px;
+                
+                &--bold{
+                    @include font-regular;
+                }
+            }
+        }
+    }
+    .main__modal{
+        padding: 16px;
+        background-color: #ebebeb;
+        display: flex;
+        flex-flow: column;
+        &::after{
+            content: "";
+            background-image: url(/img/close.png);
+            height: 15px;
+            width: 16px;
+            position: absolute;
+        }
+        &-title{
+            @include font-ligth;
+            text-align: center;
+            font-size: 21px;
+            &--strong{
+                @include font-bold;
+                font-size: 37px;
+            }
+        }
+        &-description{
+            @include font-ligth;
+            padding: 10px;
+            font-size: 15px;
+        }
+    }
+    .main__candidates{
+        padding: 16px;
+        &-title{
+            @include font-ligth;
+        }
+        .main__candidates-list{
+            @include reset-list;
+            display: flex;
+            justify-content: space-between;
+            .candidates-list__item{
+                position: relative;
+                background-image: url(/img/kayne.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                .candidates-item__content{
+                    background: rgb(51,51,51);
+                    background: linear-gradient(0deg, rgba(51,51,51,0.82) 0%, rgba(153,153,153,0.61) 37%, rgba(255,255,255,0) 100%);
+                    height: 100%;
+                    color: white;
+                    .item__content-icon{
+                        width: fit-content;
+                        padding: 10px;
+                        background-color: #1cbbb4;
+                        figure{
+                            @include reset-figure;
+                        }
+                    }
+                    .item__content-title{
+                        @include font-regular;
+                        font-size: 40px;
+                        margin: 0;
+                    }
+                    .item__content-description{
+                        @include font-ligth;
+                        font-size: 16px;
+                    }
+                    .item__content-foot{
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        margin-bottom: 10px;
+                        .content-foot__btn{
+                            @include font-regular;
+                            font-size: 14px;
+                            padding: 10px;
+                            text-align: center;
+                            border: 2px solid white;
+                            width: 150px;
+                        }
+                        .content-foot-date{
+                            @include font-regular;
+                            font-size: 12px;
+                            text-align: end;
+                        }
+                    }
+                }
+                .candidates-item__votes{
+                    display: flex;
+                    justify-content: center;
+                    @include font-ligth;
+                    font-size: 29px;
+                    color: white;
+                    .item__votes-up{
+                        display: flex;
+                        align-items: center;
+                        flex-grow: 1;
+                        background-color: #1cbbb4;
+                        figure{
+                            margin: 10px;
+                        }
+                    }
+                    .item__votes-down{
+                        display: flex;
+                        align-items: center;
+                        flex-grow: 1;
+                        background-color: #ffad1d;
+                        figure{
+                            margin: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main__cta{
+        padding: 16px;
+        background-image: url('/img/cta.png');
+        color: #333333;
+        position: relative;
+        &--shadow{
+            background-color: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+            top: 0;
+            left: 0;
+        }
+        &-title{
+            position: relative;
+            @include font-ligth;
+            font-size: 30px;
+        }
+        &-btn{
+            position: relative;
+            @include font-regular;
+            font-size: 14px;
+            padding: 10px;
+            text-align: center;
+            border: 2px solid #333333;
+        }
+    }
+}
+.main__footer{ 
+    border-top: 1px dashed #333333;
+    margin-top: 10px;
+    padding: 16px;
+    &-list {
+        @include reset-list;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        .footer-list__item{
+            @include font-ligth;
+            font-size: 12px;
+            
+            a{
+                color: #333333;
+                @include reset-anchor;
+            }
+            &:last-child{
+                text-align: center;
+            }
+        }
+    }
+}

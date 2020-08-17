@@ -1,6 +1,6 @@
 # zemui
 zemoga ui test
-YOu must use Node version <= 10.12
+YOu must use Node version <= 10.13
 
 Enable debug mode
 Windows:

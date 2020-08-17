@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ description }}" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    {{#asset}}/css/layout.scss{{/asset}}
+  </head>
+  <body>
+    <header>
+      <a href="" title="Go to home" class="head__title">
+        <h1>Rule of Thumb.</h1>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Past Trials</a>
+          </li>
+          <li>
+            <a href="#">How It Works</a>
+          </li>
+          <li>
+            <a href="#">Log In / Sign Up</a>
+          </li>
+          <li>
+            <figure class="search__wrapper">
+              <img src="/img/search.png" />
+            </figure>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="banner__wrapper">
+        <aside class="banner__copy">
+          <h2 class="banner__copy-subtitle">What’s your opinion on</h2>
+          <h3 class="banner__copy-title">Pope Francis?</h3>
+          <p class="banner__copy-description">
+            He’s talking tough on clergy sexual abuse, but is he just another
+            papal pervert protector? (thumbs down) or a true pedophile punishing
+            pontiff? (thumbs up)
+          </p>
+          <div class="banner__copy-info">
+            <a class="copy-info__link">More information</a>
+          </div>
+          <h4 class="banner__copy-veredict">What’s Your Verdict?</h4>
+          <div class="banner__copy-votes">
+            <div class="copy-votes__up">
+              <figure>
+                <img src="/img/up.png" />
+              </figure>
+            </div>
+            <div class="copy-votes__down">
+              <figure>
+                <img src="/img/down.png" />
+              </figure>
+            </div>
+          </div>
+        </aside>
+        <footer class="banner__closing">
+          <div class="banner__closing-shadow">
+            CLOSING IN
+          </div>
+          <div class="banner__closing-days">
+            <span class="banner__closing-days--bold">22</span> days
+          </div>
+        </footer>
+      </section>
+      <section class="main__modal">
+        <div class="main__modal-title">
+          Speak out. Be heard.<br />
+          <span class="main__modal-title--strong">Be counted</span>
+        </div>
+        <div class="main__modal-description">
+          Rule of Thumb is a crowd sourced court of public opinion where anyone
+          and everyone can speak out and speak freely. It’s easy: You share your
+          opinion, we analyze and put the data in a public report.
+        </div>
+      </section>
+      <section class="main__candidates">
+        <h2 class="main__candidates-title">Previous Rulings</h2>
+        <ul class="main__candidates-list">
+          <li class="candidates-list__item">
+            <div class="candidates-item__content">
+              <div class="item__content-icon">
+                <figure>
+                    <img src="/img/up.png" />
+                </figure>
+              </div>
+              <h2 class="item__content-title">Kanye West</h2>
+              <p class="item__content-description">
+                Vestibulum diam ante, porttitor a odio eget, rhoncus neque.
+                Aenean eu velit libero.
+              </p>
+              <div class="item__content-foot">
+                <div class="content-foot__btn">View Full Report</div>
+                <div class="content-foot-date">
+                  1 month ago<br />in Entertainment
+                </div>
+              </div>
+            </div>
+            <div class="candidates-item__votes">
+              <div class="item__votes-up">
+                <figure>
+                  <img src="/img/up.png" />
+                </figure>
+                64%
+              </div>
+              <div class="item__votes-down">
+                <figure>
+                    <img src="/img/down.png">
+                </figure>
+                36%
+              </div> 
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="main__cta">
+        <div class="main__cta--shadow"></div>
+        <h2 class="main__cta-title">Is there anyone else you would want us to add?</h2>
+        <div class="main__cta-btn">Submit a Name</div>
+      </section>
+    </main>
+    <footer class="main__footer">
+      <ul class="main__footer-list">
+        <li class="footer-list__item"><a href="#">Terms and Conditions</a></li>
+        <li class="footer-list__item"><a href="#">Privacy Policy</a></li>
+        <li class="footer-list__item"><a href="#">Contact Us</a></li>
+        <li class="footer-list__item">
+            Folow Us
+            <figure>
+                <img src="/img/facebook.png">
+            </figure>
+            <figure>
+                <img src="/img/twitter.png">
+            </figure>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
