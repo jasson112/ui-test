@@ -1,0 +1,40 @@
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin reset-anchor {
+    text-decoration: none;
+}
+
+@mixin reset-figure {
+    margin: 0;
+}
+
+@mixin font-ligth {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+@mixin font-regular {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+@mixin font-bold {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+@mixin respond($breakpoint) {
+    @if ($breakpoint == tablet) {
+        @media only screen and (min-width: $tablet) { @content };
+    }
+    @if ($breakpoint == desktop) {
+        @media only screen and (min-width: $desktop) { @content };
+    }
+    @if ($breakpoint == desktop-large) {
+        @media only screen and (min-width: $desktop-large) { @content };
+    }
+}
