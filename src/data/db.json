@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "luke",
+      "password": "maytheforcebewithyou",
+      "votes": [
+        {
+          "candidateId": 1,
+          "up": 2,
+          "down": 1
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": 1,
+      "name": "Kanye West",
+      "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
+      "type": "Entertainment",
+      "votes": {
+        "up": 26,
+        "down": 25
+      },
+      "isfeature": false,
+      "img": {
+        "list": "/img/kayne.png",
+        "feature": "https://imag"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Mark Zuckerberg",
+      "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
+      "type": "Business",
+      "votes": {
+        "up": 2,
+        "down": 8
+      },
+      "isfeature": false,
+      "img": {
+        "list": "/img/mark.png",
+        "feature": "https://imag"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Cristina Fernández de Kirchner",
+      "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
+      "type": "Business",
+      "votes": {
+        "up": 2,
+        "down": 8
+      },
+      "isfeature": false,
+      "img": {
+        "list": "/img/cristina.png",
+        "feature": "https://imag"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Malala Yousafzai",
+      "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
+      "type": "Business",
+      "votes": {
+        "up": 2,
+        "down": 8
+      },
+      "isfeature": false,
+      "img": {
+        "list": "/img/malala.png",
+        "feature": "https://imag"
+      }
+    }
+  ]
+}

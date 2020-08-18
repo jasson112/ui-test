@@ -1,0 +1,184 @@
+@include respond(desktop){
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding: 41px 0 41px 0;
+        >nav{
+            >ul{
+                width: 500px;
+                justify-content: space-around;
+                >li{
+                    >a{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        .banner__wrapper{
+            width: 100%;
+            padding: 18vh 0 0 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            .banner__copy{
+                width: 500px;
+                margin-bottom: 17vh;
+                &-title{
+                    font-size: 60px;
+                }
+                &-votes{
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    bottom: -9vh;
+                    .copy-votes__up{
+                        figure{
+                            padding: 20px;
+                        }
+                        
+                    }
+                    .copy-votes__down{
+                        figure{
+                            padding: 20px;
+                        }
+                    }
+                }
+            }
+            .banner__closing{
+                &-days{
+                    flex-grow: 3;
+                }
+            }
+        }
+        .main__modal{
+            margin-top: 35px;
+            flex-flow: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0;
+            &-title{
+                width: calc(30% - 20px);
+                padding: 20px;
+            }
+            &-description{
+                width: calc(70% - 20px);
+                padding: 20px;
+            }
+            &::after{
+                right: 10px;
+                top: 8vh;
+            }
+        }
+        .main__candidates{
+            padding: 0;
+            &-title{
+                margin: 40px 0;
+                font-size: 40px;
+            }
+            &-list{
+                flex-wrap: wrap;
+                .candidates-list__item{
+                    width: 500px;
+                    height: 550px;
+                    margin-bottom: 30px;
+                    .candidates-item__content{
+                        height: 100%;
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: flex-end;
+                        .item__content-head{
+                            display: flex;
+                            flex-wrap: wrap;
+                            .item__content-icon{
+                                flex-grow: 0;
+                                width: 32px;
+                                height: 32px;
+                                figure{
+                                    img{
+                                        width: 32px;
+                                        height: 32px;
+                                    }
+                                }
+                            }
+                            .item__content-title{
+                                flex-grow: 1;
+                                font-size: 45px;
+                            }
+                            .item__content-description{
+                                flex-grow: 1;
+                                padding: 13px 13px 13px 45px;
+                            }
+                        }
+                        .item__content-foot{
+                            justify-content: space-between;
+                            padding: 20px 13px 20px 45px;
+                        }
+                    }
+                }
+            }
+        }
+        .main__cta{
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            &-btn{
+                padding: 14px 40px;
+            }
+        }
+        
+    }
+    .main__footer{
+        padding: 0;
+        &-list{
+            flex-flow: wrap;
+            justify-content: space-around;
+            .footer-list__item{
+                &:last-child{
+                    display: flex;
+                    align-items: center;
+                    figure{
+                        margin: 7px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@include respond(desktop-large){
+    header{
+        max-width: 1024px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    main{
+        .banner__wrapper{
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+        .main__modal{
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+        .main__candidates{
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+        .main__cta{
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+    }
+    .main__footer{
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+}
