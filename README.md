@@ -1,10 +1,18 @@
 # zemui
 zemoga ui test
-YOu must use Node version <= 10.13
+You must use Node version <= 10.13
 
-Enable debug mode
-Windows:
-set DEBUG=* & node app.js
+To run the server you haver to:
 
-MAC
-set DEBUG=* node app.js
+´´´
+yarn server
+yarn app
+´´´
+
+Or if you use NPM
+
+´´´
+npm run server
+npm run app
+´´´
+========

@@ -85,40 +85,53 @@
       <section class="main__candidates">
         <h2 class="main__candidates-title">Previous Rulings</h2>
         <ul class="main__candidates-list">
-          <li class="candidates-list__item">
-            <div class="candidates-item__content">
-              <div class="item__content-icon">
-                <figure>
-                    <img src="/img/up.png" />
-                </figure>
+          {{#candidates}}
+            <li class="candidates-list__item" style="background-image: url('{{img.list}}');">
+              <div class="candidates-item__content">
+                <candidates-item id="{{id}}" data-up="{{votes.up}}" data-down="{{votes.down}}">
+                  <div class="item__content-head">
+                    <div class="item__content-icon up">
+                      <figure>
+                          <img src="/img/up.png" />
+                      </figure>
+                    </div>
+                    <h2 class="item__content-title">{{name}}</h2>
+                    <p class="item__content-description">{{description}}</p>
+                  </div>
+                  <div class="item__content-foot">
+                    <div class="item__content-icon up">
+                      <figure>
+                          <img src="/img/up.png" />
+                      </figure>
+                    </div>
+                    <div class="item__content-icon down">
+                      <figure>
+                          <img src="/img/down.png" />
+                      </figure>
+                    </div> 
+                    <div class="content-foot__btn">Vote now</div>
+                    <div class="content-foot-date">
+                      1 month ago<br />in {{type}}
+                    </div>
+                  </div>
+                  <div class="candidates-item__votes">
+                    <div class="item__votes-up" data-votes="{{votes.up}}">
+                      <figure>
+                        <img src="/img/up.png" />
+                      </figure>
+                      <span>0</span>
+                    </div>
+                    <div class="item__votes-down" data-votes="{{votes.down}}">
+                      <figure>
+                          <img src="/img/down.png">
+                      </figure>
+                      <span>0</span>
+                    </div> 
+                  </div>
+                </candidates-item>
               </div>
-              <h2 class="item__content-title">Kanye West</h2>
-              <p class="item__content-description">
-                Vestibulum diam ante, porttitor a odio eget, rhoncus neque.
-                Aenean eu velit libero.
-              </p>
-              <div class="item__content-foot">
-                <div class="content-foot__btn">View Full Report</div>
-                <div class="content-foot-date">
-                  1 month ago<br />in Entertainment
-                </div>
-              </div>
-            </div>
-            <div class="candidates-item__votes">
-              <div class="item__votes-up">
-                <figure>
-                  <img src="/img/up.png" />
-                </figure>
-                64%
-              </div>
-              <div class="item__votes-down">
-                <figure>
-                    <img src="/img/down.png">
-                </figure>
-                36%
-              </div> 
-            </div>
-          </li>
+            </li>
+          {{/candidates}}     
         </ul>
       </section>
       <section class="main__cta">
@@ -133,7 +146,7 @@
         <li class="footer-list__item"><a href="#">Privacy Policy</a></li>
         <li class="footer-list__item"><a href="#">Contact Us</a></li>
         <li class="footer-list__item">
-            Folow Us
+            Folow Us 
             <figure>
                 <img src="/img/facebook.png">
             </figure>
@@ -144,4 +157,6 @@
       </ul>
     </footer>
   </body>
+  {{#asset}}main.js{{/asset}}
+  {{#asset}}runtime.js{{/asset}}
 </html>

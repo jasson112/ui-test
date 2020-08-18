@@ -11,7 +11,7 @@ module.exports = {
   },
   entry: {
     //main: ['./src/front/scss/layout.scss', './src/front/js/main.js'],
-    main: ['./src/front/scss/layout.scss']
+    main: ['./src/front/scss/layout.scss', './src/front/js/app.js']
   },
   plugins: [
     new webpack.HashedModuleIdsPlugin(),

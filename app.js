@@ -17,4 +17,4 @@ app.set('views', path.join(__dirname, 'src', 'views'));
 app.set('view engine', 'html');
 
 app.use('/', voteRouter);
-app.listen(port, () => debug(`successfully created app at: ${chalk.green(`http://localhost:${port}`)}`));
+app.listen(port, () => console.log(`successfully created app at: ${chalk.green(`http://localhost:${port}`)}`));
