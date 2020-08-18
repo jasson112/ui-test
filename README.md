@@ -4,6 +4,18 @@ ___Note: this is a merge from: https://github.com/jasson112/zemui___
 
 You must use Node version <= 10.13
 
+To install:
+
+```sh
+yarn
+```
+
+If You use NPM
+
+```sh
+npm install
+```
+
 To run the server you haver to:
 
 ```sh
